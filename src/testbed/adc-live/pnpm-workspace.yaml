@@ -1,0 +1,5 @@
+ignoredBuiltDependencies:
+  - sharp
+onlyBuiltDependencies:
+  - '@serialport/bindings-cpp'
+  - unrs-resolver

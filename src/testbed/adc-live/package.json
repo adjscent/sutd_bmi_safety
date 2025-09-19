@@ -1,0 +1,30 @@
+{
+  "name": "adc-live",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=development node server.js",
+    "start:test": "cross-env TEST_MODE=true NODE_ENV=development node server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^13.0.0",
+    "chart.js": "^4.4.9",
+    "cross-env": "^7.0.3",
+    "next": "15.3.1",
+    "react": "^19.0.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^19.0.0",
+    "serialport": "^11.0.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "eslint": "^9.25.1",
+    "eslint-config-next": "15.3.1"
+  }
+}
