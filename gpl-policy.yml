@@ -1,0 +1,42 @@
+license_policies:
+  - license_key: mit
+    label: Approved for GPLv3
+    color_code: green
+  - license_key: bsd-new
+    label: Approved for GPLv3
+    color_code: green
+  - license_key: bsd-simplified
+    label: Approved for GPLv3
+    color_code: green
+  - license_key: isc
+    label: Approved for GPLv3
+    color_code: green
+  - license_key: apache-2.0
+    label: Approved for GPLv3
+    color_code: green
+
+  - license_key: gpl-2.0
+    label: Review version compatibility
+    color_code: yellow
+  - license_key: lgpl-2.1
+    label: Review linking terms
+    color_code: yellow
+  - license_key: lgpl-3.0
+    label: Review linking terms
+    color_code: yellow
+  - license_key: agpl-3.0
+    label: Review network copyleft obligations
+    color_code: yellow
+
+  - license_key: cddl-1.0
+    label: Not approved for GPL use
+    color_code: red
+  - license_key: cddl-1.1
+    label: Not approved for GPL use
+    color_code: red
+  - license_key: epl-1.0
+    label: Not approved for GPL use
+    color_code: red
+  - license_key: epl-2.0
+    label: Review carefully
+    color_code: yellow
