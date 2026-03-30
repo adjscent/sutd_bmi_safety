@@ -14,5 +14,5 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Check License Header
-        uses: apache/skywalking-eyes/header@main
+      - name: Check Dependencies' License
+        uses: apache/skywalking-eyes/dependency@main 
