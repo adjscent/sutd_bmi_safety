@@ -1,0 +1,40 @@
+name: License Compliance
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  license-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run license compliance check
+        uses: mikaelvesavuori/license-compliance-action@v1
+        with:
+          # Fail the build if non-compliant licenses are found
+          failOn: "LGPL"
+
+          # Optional: allowlist specific licenses
+          allow: "MIT;Apache-2.0;BSD-2-Clause;BSD-3-Clause;GPL;AGPL"
+
+          # Optional: output report
+          outputFile: "license-report.json"
+
+      - name: Upload license report (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: license-report
+          path: license-report.json
